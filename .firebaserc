@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pluginzap-wule": {
+      "hosting": {
+        "application": [
+          "pluginzap-wule"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pluginzap-wule"
+  }
+}

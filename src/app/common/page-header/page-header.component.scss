@@ -1,0 +1,12 @@
+:host {
+  @apply block mb-8;
+
+  h1 {
+    @apply text-2xl font-bold;
+  }
+
+  p {
+    @apply text-gray-500
+      dark:text-gray-400;
+  }
+}

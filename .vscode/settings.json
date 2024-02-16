@@ -1,0 +1,64 @@
+{
+    "angular.log": "off",
+    "scss.format.newlineBetweenRules": false,
+    "scss.format.newlineBetweenSelectors": false,
+    "scss.format.spaceAroundSelectorSeparator": true,
+    "html.format.wrapLineLength": 80,
+    "html.format.indentInnerHtml": true,
+    "html.format.indentHandlebars": true,
+    "html.format.maxPreserveNewLines": 0,
+    "html.format.preserveNewLines": false,
+    "html.format.wrapAttributesIndentSize": 2,
+    "html.format.contentUnformatted": "pre,code,textarea",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.referencesCodeLens.showOnAllFunctions": true,
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports.eslint": "explicit"
+    },
+    "[json][jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascript][javascriptreact][typescript][typescriptreact][scss][css][less]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.arrowParens": "always",
+    "prettier.bracketSpacing": true,
+    "prettier.printWidth": 80,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "eslint.enable": true,
+    "eslint.format.enable": true,
+    "eslint.codeActionsOnSave.mode": "all",
+    "eslint.useESLintClass": true,
+    "eslint.validate": [
+        "typescript",
+        "typescriptreact",
+        "html"
+    ],
+    "eslint.options": {
+        "overrideConfigFile": ".eslintrc.json",
+        "extensions": [
+            ".ts",
+            ".html"
+        ]
+    },
+    "extensions.ignoreRecommendations": false,
+    "path-intellisense.showHiddenFiles": true,
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "style": "scss",
+            "externalTemplate": true
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<button
+  [type]="type"
+  (click)="!disabled || $event.stopPropagation()"
+  [disabled]="disabled"
+>
+  @if (!loading) {
+    @if (icon) {
+      <app-icon [icon]="icon" />
+    }
+    <ng-content></ng-content>
+  } @else {
+    <app-icon icon="spinner" class="spinner" size="lg"></app-icon>
+  }
+</button>

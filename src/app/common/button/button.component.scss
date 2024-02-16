@@ -1,0 +1,54 @@
+:host {
+  @apply inline-block min-w-fit;
+
+  button {
+    @apply text-base
+      flex
+      justify-center
+      items-center
+      gap-1
+      text-base
+      rounded-full
+      px-8
+      py-2
+      min-w-40
+      min-h-10
+      transition-colors
+      bg-brand-600
+      uppercase
+      text-white
+      m-1;
+
+    &:not(:disabled) {
+      &:hover {
+        @apply bg-brand-700;
+      }
+
+      &:active,
+      &:focus {
+        @apply shadow-inner
+          outline
+          outline-4
+          outline-brand-200/70
+          dark:outline-brand-200/20;
+      }
+
+      &:active {
+        @apply bg-brand-800;
+      }
+    }
+
+    &:disabled {
+      @apply bg-gray-200
+      text-white
+      text-opacity-85
+      cursor-not-allowed
+      dark:bg-gray-700
+      dark:text-opacity-10;
+    }
+  }
+
+  app-icon.spinner ::ng-deep svg {
+    @apply w-full h-full text-gray-200 animate-spin dark:text-gray-600 fill-blue-600;
+  }
+}

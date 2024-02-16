@@ -1,0 +1,25 @@
+<div class="card">
+  <div>
+    <h1>Entrar</h1>
+    <p>Não possui uma conta? <a href="">Cadastre-se</a></p>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="message()">
+    <app-input name="email" label="E-mail" formControlName="email" required>
+      <app-icon icon="communication-message" prefix />
+    </app-input>
+    <app-input
+      label="Senha"
+      name="password"
+      formControlName="password"
+      type="password"
+      required
+    >
+      <app-icon icon="security-lock" prefix />
+    </app-input>
+    <app-button
+      [disabled]="loginForm.disabled || loginForm.invalid || loginForm.pristine"
+      type="submit"
+      >Entrar</app-button
+    >
+  </form>
+</div>

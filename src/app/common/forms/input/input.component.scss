@@ -1,0 +1,56 @@
+:host {
+  @apply flex
+  flex-col;
+
+  label {
+    @apply text-sm
+    cursor-default
+    mb-1
+    font-medium
+    text-gray-800
+    dark:text-white/60;
+  }
+
+  .field {
+    @apply flex
+    min-h-10
+    gap-1
+    justify-center
+    items-center
+    border
+    rounded-lg
+    border-gray-200
+    p-2
+    transition-all
+    ring-1
+    ring-transparent
+    dark:bg-gray-700
+    dark:border-gray-600;
+
+    &.error {
+      @apply border-red-300 ring-red-300 #{!important};
+    }
+
+    &:has(input:focus) {
+      @apply ring-blue-400 border-blue-400;
+    }
+
+    input {
+      @apply flex-1 h-full border-0 outline-0 bg-transparent;
+    }
+  }
+
+  .field-hint {
+    @apply text-xs min-h-4 mt-1;
+
+    .error {
+      @apply text-red-400 text-right block;
+    }
+
+    &:has(.error) {
+      .hint {
+        display: none;
+      }
+    }
+  }
+}

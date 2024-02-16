@@ -1,0 +1,61 @@
+:host nav {
+  @apply sticky
+  top-0
+  w-full
+  block
+  border-b
+  bg-white
+  dark:bg-slate-800
+  border-gray-300
+  dark:border-gray-700;
+
+  & > div {
+    @apply flex
+    gap-2
+    items-center
+    justify-between
+    w-full
+    max-w-7xl
+    mx-auto
+    min-h-10
+    px-2;
+
+    > a {
+      @apply min-w-20;
+    }
+  }
+
+  .toggle {
+    @apply md:hidden;
+  }
+
+  .menu {
+    @apply flex
+    gap-2
+    flex-1
+    text-sm;
+
+    a {
+      @apply px-2
+      h-full
+      text-gray-500
+      min-h-14
+      flex
+      items-center
+      gap-1
+      justify-center
+      border-b-2
+      border-transparent
+      hover:border-gray-300
+      dark:hover:border-gray-600
+      dark:text-gray-400;
+      margin-bottom: -1px;
+
+      &.active {
+        @apply text-gray-900
+        dark:text-gray-50
+        border-brand-500 #{!important};
+      }
+    }
+  }
+}

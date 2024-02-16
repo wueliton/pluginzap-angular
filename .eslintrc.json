@@ -1,0 +1,273 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.eslint.json"
+        ],
+        "ecmaVersion": "latest",
+        "createDefaultProgram": false
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "plugins": [
+        "unused-imports",
+        "eslint-plugin-import"
+      ],
+      "rules": {
+        "yoda": "error",
+        "no-console": "error",
+        "comma-dangle": "error",
+        "object-curly-newline": "error",
+        "no-unsafe-optional-chaining": "error",
+        "no-unused-private-class-members": "error",
+        "quotes": [
+          "error",
+          "single"
+        ],
+        "arrow-parens": [
+          "error",
+          "always"
+        ],
+        "arrow-body-style": [
+          "error",
+          "as-needed"
+        ],
+        "multiline-comment-style": [
+          "error",
+          "starred-block"
+        ],
+        "curly": [
+          "error",
+          "multi",
+          "consistent"
+        ],
+        "sort-vars": [
+          "error",
+          {
+            "ignoreCase": true
+          }
+        ],
+        "max-len": [
+          "error",
+          {
+            "code": 80,
+            "ignoreRegExpLiterals": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreStrings": true,
+            "ignoreTrailingComments": true,
+            "ignoreUrls": true
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "parent",
+              "sibling",
+              "index"
+            ],
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
+        "no-underscore-dangle": [
+          "error",
+          {
+            "allow": [
+              "_id"
+            ]
+          }
+        ],
+        "unused-imports/no-unused-imports": "error",
+        "@typescript-eslint/no-unsafe-call": "error",
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-unsafe-return": "error",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-non-null-assertion": "warn",
+        "@typescript-eslint/no-useless-constructor": "error",
+        "@typescript-eslint/no-unsafe-member-access": "error",
+        "@typescript-eslint/no-unnecessary-condition": "warn",
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
+        "@typescript-eslint/prefer-reduce-type-parameter": "error",
+        "@typescript-eslint/no-unnecessary-type-arguments": "error",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "vars": "all"
+          }
+        ],
+        "@typescript-eslint/no-unused-expressions": [
+          "off",
+          {
+            "allowShortCircuit": true,
+            "allowTernary": true
+          }
+        ],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": [
+              "private-static-field",
+              "protected-static-field",
+              "public-static-field",
+              "private-instance-field",
+              "protected-instance-field",
+              "public-instance-field",
+              "constructor",
+              "private-static-method",
+              "protected-static-method",
+              "public-static-method",
+              "private-instance-method",
+              "protected-instance-method",
+              "public-instance-method"
+            ]
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": [
+              "parameter"
+            ],
+            "format": [
+              "camelCase"
+            ],
+            "modifiers": [
+              "unused"
+            ],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": [
+              "variable"
+            ],
+            "format": null,
+            "modifiers": [
+              "const"
+            ]
+          },
+          {
+            "selector": [
+              "objectLiteralProperty"
+            ],
+            "format": [
+              "camelCase",
+              "snake_case"
+            ]
+          },
+          {
+            "selector": [
+              "property",
+              "objectLiteralProperty"
+            ],
+            "format": null,
+            "filter": {
+              "regex": "_id",
+              "match": true
+            }
+          },
+          {
+            "selector": [
+              "property"
+            ],
+            "modifiers": [
+              "private"
+            ],
+            "format": [
+              "camelCase"
+            ],
+            "custom": {
+              "regex": "^[#]",
+              "match": true
+            }
+          },
+          {
+            "selector": [
+              "memberLike"
+            ],
+            "modifiers": [
+              "static"
+            ],
+            "format": [
+              "UPPER_CASE"
+            ]
+          },
+          {
+            "selector": [
+              "typeLike"
+            ],
+            "format": [
+              "PascalCase"
+            ]
+          },
+          {
+            "selector": [
+              "default"
+            ],
+            "format": [
+              "camelCase"
+            ]
+          }
+        ],
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@angular-eslint/no-conflicting-lifecycle": "error",
+        "@angular-eslint/no-empty-lifecycle-method": "error",
+        "@angular-eslint/prefer-on-push-component-change-detection": "error",
+        "@angular-eslint/use-component-view-encapsulation": "error",
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "parser": "@angular-eslint/template-parser",
+      "rules": {
+        "@angular-eslint/template/eqeqeq": "error",
+        "@angular-eslint/template/banana-in-box": "error",
+        "@angular-eslint/template/no-negated-async": "warn",
+        "@angular-eslint/template/use-track-by-function": "warn",
+        "@angular-eslint/template/conditional-complexity": "error",
+        "@angular-eslint/template/no-duplicate-attributes": "error"
+      }
+    }
+  ]
+}

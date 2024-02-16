@@ -1,0 +1,37 @@
+<label (click)="input.focus()">{{ label }}</label>
+<div
+  class="field"
+  [class.error]="!!ngControl?.errors && ngControl?.touched"
+  (click)="input.focus()"
+>
+  <ng-content select="[prefix]" />
+  <input
+    #input
+    [name]="name"
+    [type]="type === 'password' && showPassword() ? 'text' : type ?? 'text'"
+    [placeholder]="placeholder ?? ''"
+    [readOnly]="readonly"
+    [disabled]="disabled"
+    [value]="value"
+    (input)="onValueChange($event.target)"
+  />
+  <ng-content select="[suffix]" />
+  @if (type === 'password') {
+    <button (click)="toggleShowPassword(); $event.stopPropagation()">
+      <app-icon
+        [icon]="showPassword() ? 'design-tools-eye-no' : 'design-tools-eye'"
+      />
+    </button>
+  }
+  @if (required || ngControl?.errors?.['required']) {
+    <app-icon icon="user-interface-asterisk" />
+  }
+</div>
+<div class="field-hint">
+  @if (hint) {
+    <span class="hint">{{ hint }}</span>
+  }
+  @if (ngControl?.errors && ngControl?.touched) {
+    <span class="error">{{ getErrorMessages(ngControl?.errors) }}</span>
+  }
+</div>

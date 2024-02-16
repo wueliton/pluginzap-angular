@@ -1,0 +1,4 @@
+:host {
+  @apply absolute flex min-w-min bottom-2 inset-x-1/2;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,56 @@
+:host {
+  display: block;
+
+  .list {
+    @apply shadow-sm
+    cursor-pointer
+    bg-white
+    dark:bg-slate-800
+    border
+    border-gray-200
+    rounded-lg
+    dark:border-slate-600
+    divide-y
+    divide-gray-100
+    dark:divide-slate-700
+    text-gray-500
+    dark:text-gray-400
+    overflow-hidden;
+
+    .item {
+      @apply p-4
+      flex
+      justify-between
+      gap-x-6
+      py-5
+      hover:bg-gray-50
+      dark:hover:bg-slate-700
+      active:bg-gray-100
+      dark:active:bg-slate-900
+      relative;
+
+      p {
+        @apply text-xs
+        leading-5
+        mt-1;
+      }
+
+      .title {
+        @apply text-sm
+        font-semibold
+        text-gray-900
+        dark:text-white;
+
+        & span {
+          @apply absolute left-0 top-0 bottom-0 right-0;
+        }
+      }
+
+      & div:last-child {
+        @apply flex
+        gap-4
+        items-center;
+      }
+    }
+  }
+}

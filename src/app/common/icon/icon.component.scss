@@ -1,0 +1,19 @@
+:host {
+  @apply flex items-center justify-center h-4 w-4 relative;
+
+  &.sm {
+    @apply h-3 w-3;
+  }
+
+  &.lg {
+    @apply h-6 w-6;
+  }
+
+  &.xl {
+    @apply h-8 w-8;
+  }
+
+  ::ng-deep svg {
+    @apply block h-full w-full;
+  }
+}
